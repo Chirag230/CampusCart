@@ -1,0 +1,14 @@
+.category-container {
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    top: 56px;
+    z-index: 1020;
+  }
+  
+  .category-item:hover {
+    background-color: #ff5107; /* Bootstrap warning color */
+    color: #343a40; /* Bootstrap dark color */
+    border-radius: 4px;
+  }
+  

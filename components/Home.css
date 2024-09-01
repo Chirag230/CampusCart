@@ -1,0 +1,128 @@
+/* Header styling */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1040;
+    background-color: #343a40; /* Dark background */
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.1);
+    border-bottom: 3px solid #fff;
+    padding: 10px 20px;
+}
+
+/* Sidebar styling */
+.category-sidebar {
+    position: fixed;
+    top: 56px; /* Height of the fixed header */
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    z-index: 1030;
+    background-color: #343a40; /* Dark background */
+    padding: 20px;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.1);
+    overflow-y: auto; /* Ensure the sidebar is scrollable */
+}
+
+/* Main content area styling */
+.main-content {
+    margin-top: 56px; /* Height of the fixed header */
+    margin-left: 200px; /* Width of the fixed sidebar */
+    padding: 20px;
+}
+
+/* Additional styling */
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.icons {
+    font-size: 32px;
+    height: 32px;
+    width: 32px;
+    color: #ddd;
+    cursor: pointer;
+}
+
+.red-icons {
+    font-size: 32px;
+    height: 32px;
+    width: 32px;
+    color: #FF0000;
+    cursor: pointer;
+}
+
+.icons:hover {
+    color: red;
+}
+
+.icon-cont {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+    padding: 7px;
+    background-color: #fff;
+    margin: 7px;
+}
+
+.price-text {
+    color: #002f34;
+}
+
+.d-flex.justify-content-center.flex-wrap > .card {
+    margin-right: 40px; /* Adjust the value based on your preference */
+    margin-bottom: 20px; /* Add margin to the bottom of each card */
+}
+
+.clear-btn {
+    height: 44px;
+    background-color: #002f34;
+    color: #fff;
+    border: 2px solid #002f34;
+    outline: none;
+    border-radius: 4px;
+    margin-left: 300px;
+}
+
+.cat-container {
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.1);
+    padding: 8px 20px;
+    cursor: pointer;
+    overflow-y: auto;
+}
+
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.icon-button {
+    background-color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.icon-button:hover {
+    transform: scale(1.2);
+}
+
+.delete-button {
+    color: #e74c3c;
+}
+
+.update-button {
+    color: #3498db;
+}

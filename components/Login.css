@@ -1,0 +1,56 @@
+.login-container {
+    max-width: 400px;
+    margin: 50px auto 0; /* Added margin-top of 50px */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+  
+  .login-heading {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .login-form input[type="text"],
+  .login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .login-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Login.css */
+
+.signup-container {
+    text-align: center; /* Align the content to the center */
+  }
+  
+  .signup-text {
+    display: inline-block; /* Display as inline-block */
+    margin-right: 10px; /* Add some space between the text and the link */
+  }
+  
+  .signup-link {
+    display: inline-block; /* Display as inline-block */
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline */
+  }
+  

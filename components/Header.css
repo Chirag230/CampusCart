@@ -1,0 +1,191 @@
+.header{
+    /* height : 50px; */
+}    
+.header-container{
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.1);
+    border-bottom:3px solid #fff;
+    padding:10px 20px;
+    background-color:#002f3408;
+}
+.cat-container{
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.1);
+    padding:8px 20px;
+    cursor:pointer;
+}
+.mt-3{
+    display:inline-block;
+    margin-top:10px
+}
+.search{
+    /* margin-left:50px; */
+    outline:none;
+    padding-left:10px;
+    width:900px;
+    height:44px;
+    border:2px solid #002f34;
+    border-radius:4px 0px 0px 4px;
+}
+.serach-btn{
+    height:44px;
+    /* background-color: #002f34; */
+    /* color: #fff; */
+    border:2px solid #002f34;
+    outline:none;
+    border-radius:0px 4px 4px 0px;
+    
+}
+.border-btn{
+    height:44px;
+    background-color: #002f34;
+    color: #fff;
+    border:2px solid #002f34;
+    outline:none;
+    border-radius:4px;
+    margin-right:5px;
+}
+.category{
+    padding:5px;
+}
+.center {
+    text-align: center;
+    font-size:40px;
+    margin-left:370px;
+  }
+  .links {
+    text-decoration: none;
+    font-size: 19px;
+    height: 10px; /* Adjusted to match the height of .border-btn */
+    background-color: #002f34;
+    color: #fff;
+    border: 3px solid #002f34;
+    outline: none;
+    border-radius: 4px;
+    margin-right: 10px;
+    margin-bottom: 6px;
+    margin-top: 6px;
+    padding: 5px; /* Adjust the value based on your preference */
+}
+.logout-btn{
+    text-decoration: none;
+    font-size: 19px;
+    height: 10px; /* Adjusted to match the height of .border-btn */
+    background-color: #002f34;
+    color: #fff;
+    border: 3px solid #002f34;
+    outline: none;
+    border-radius: 4px;
+    margin-right: 10px;
+    margin-bottom: 6px;
+    margin-top: 6px;
+    padding: 5px;
+}
+.new-btn{
+    display: flex;
+    place-items: center;
+}
+.hiuser{
+    height:44px;
+   
+    border-radius:4px;
+    margin-right:5px;
+    margin-top:5px;
+}
+
+ .home-btn{
+    height:44px;
+    border:2px solid #002f34;
+ }
+ .custom-search-input {
+    width: 500px; /* Adjust the width as needed */
+}
+/* Header.css */
+.navbar {
+    background-color: #004085; /* Darker blue background */
+}
+
+.navbar-brand {
+    color: #ffffff !important; /* White color for the brand icon */
+    margin-left: 0
+}
+
+.navbar-brand:hover {
+    color: #cce5ff !important; /* Light blue color on hover */
+}
+
+.btn-light {
+    color: #004085; /* Dark blue text color for buttons */
+    background-color: #e9ecef; /* Light background for buttons */
+    border: 1px solid #ced4da; /* Border color for buttons */
+}
+
+.btn-light:hover {
+    background-color: #d6d6d6; /* Slightly darker background on hover */
+}
+
+.custom-search-input {
+    border-radius: 20px; /* Rounded corners for search input */
+    border: 1px solid #ced4da; /* Border color for search input */
+}
+
+.dropdown-menu {
+    background-color: #ffffff; /* White background for dropdown menu */
+    border: 1px solid #ced4da; /* Border color for dropdown */
+}
+
+.dropdown-item {
+    color: #004085; /* Dark blue text color for dropdown items */
+}
+
+.dropdown-item:hover {
+    background-color: #e9ecef; /* Light background on hover */
+}
+
+.text-danger {
+    color: #dc3545 !important; /* Red color for logout button */
+}
+.circular-btn {
+    width: 40px; /* Adjust the size as needed */
+    height: 40px; /* Adjust the size as needed */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.container-fluid {
+    padding: 0; 
+}
+
+.navbar-nav {
+    margin-left: auto; /* Ensure the navbar items align correctly */
+}
+/* Header.css */
+
+/* Ensure no margin is applied to the home button */
+.navbar-brand {
+    margin-left: 0 !important;
+}
+
+/* Remove margin from the BiSolidUserDetail icon button */
+.btn-user-detail {
+    margin-right: 0 !important;
+    border-radius: 50%;
+    width: 45px;
+    height: 40px;
+}
+
+/* Optional: Style adjustments for the dropdown menu */
+.dropdown-menu {
+    min-width: 200px;
+    position: absolute;
+    right: 0;
+    top: 60px;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030; /* Ensure it stays above other elements */
+    background-color: #343a40; /* Bootstrap dark background */
+}
