@@ -3,11 +3,15 @@ const bodyParser = require('body-parser')
 var jwt = require('jsonwebtoken');
 const multer  = require('multer')
 const cors = require('cors')
-// const http = require('http');
+const { Server } = require("socket.io");
+const http = require('http');
 const app = express()
-
-
-
+const httpserver = http.createServer(app);
+const io = new Server(httpserver,{
+  cors:{
+    origin:'*'
+  }
+})
 const path = require('path');
 const isEmail = require('validator/lib/isEmail'); // Validator library for email validation
 app.use(bodyParser.json())
@@ -142,7 +146,7 @@ app.post('/login',(req,res)=>{
         const token = jwt.sign({
           data: result
         }, 'MYKEY', { expiresIn: '1hr' });
-      res.send({message:'User found :) success',token:token,userId:result._id})
+      res.send({message:'User found :) success',token:token,userId:result._id,username:result.username})
       }
       else
       {
@@ -285,6 +289,38 @@ app.get('/my-profile/:userId',(req,res)=>{
   
 })
 
+app.put('/update-profile/:userId', (req, res) => {
+  const _userId = req.params.userId;
+  const { username, email, Contact_Number } = req.body;
+
+  Users.findOneAndUpdate(
+      { _id: _userId },
+      { 
+          username: username,
+          email: email,
+          contact: Contact_Number
+      },
+      { new: true, runValidators: true } 
+  )
+  .then((updatedUser) => {
+      if(updatedUser) {
+          res.send({
+              message: 'Profile updated successfully',
+              user: {
+                  email: updatedUser.email,
+                  username: updatedUser.username,
+                  Contact_Number: updatedUser.contact
+              }
+          });
+      } else {
+          res.status(404).send({message: 'User not found'});
+      }
+  })
+  .catch((err) => {
+      res.status(500).send({message: 'Error updating profile', error: err.message});
+  });
+});
+
 
 app.get('/get-product',(req,res)=>{
   const catName = req.query.catName;
@@ -384,12 +420,21 @@ app.get('/search',(req,res)=>{
 //   }
 // });
 
-// io.on('connection',(socket)=>{
-//   console.log('checksoc');
-//     console.log('socket connected',socket.id);
-// })
+let messages = [];
+console.log(messages)
+io.on('connection',(socket)=>{
+  // console.log('checksoc');
+    console.log('socket connected',socket.id);
+    socket.on('sendmsg', (data) => {
+      console.log('Received message:', data);
+      messages.push(data);
+      io.emit('getmsg', messages);
+    });
+    io.emit('getmsg', messages); // Emit the updated messages array to all connected clients
+    
+})
 
 
-app.listen(port, () => {
+httpserver.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
